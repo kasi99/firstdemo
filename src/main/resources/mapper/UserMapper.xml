@@ -2,7 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.kasi.firstdemo.dao.UserDao" >
     <select id="findAll" resultType="com.kasi.firstdemo.entity.User">
-        select name,sex,age,address
+        select name,age,address
         from t_user
+    </select>
+
+    <select id="listByType" resultType="com.kasi.firstdemo.entity.User">
+        select * from user
+        where type=#{type}
     </select>
 </mapper>

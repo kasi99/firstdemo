@@ -2,11 +2,9 @@ package com.kasi.firstdemo.serviceImpl;
 
 import com.kasi.firstdemo.dao.UserDao;
 import com.kasi.firstdemo.entity.User;
-import com.kasi.firstdemo.service.IService;
+import com.kasi.firstdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * ${TODO}
@@ -15,12 +13,20 @@ import java.util.List;
  * @Date: 2018-05-29 05:01
  * @Version:
  */
-@Service(value = "userService")
-public class UserServiceImpl implements IService<User> {
+@Service("userService")
+public class UserServiceImpl implements UserService {
+
     @Autowired
     UserDao userDao;
+
     @Override
-    public List<User> findAll() {
-        return userDao.findAll();
+    public void saveUser(User user) {
+        userDao.save(user);
     }
+
+    @Override
+    public void deleteUser(User user) {
+        userDao.delete(user);
+    }
+
 }

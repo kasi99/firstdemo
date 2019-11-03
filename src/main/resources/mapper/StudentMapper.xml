@@ -5,4 +5,15 @@
         select name,address
         from t_student
     </select>
+
+    <select id="get" resultType="com.kasi.firstdemo.entity.Student">
+        select id, name ,address
+        from t_student
+        where id=${id}
+    </select>
+    <select id="list" resultType="com.kasi.firstdemo.entity.Student">
+        select id, name ,type
+        from user
+        where type in (${type})
+    </select>
 </mapper>

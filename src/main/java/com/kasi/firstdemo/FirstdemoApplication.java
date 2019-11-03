@@ -4,7 +4,8 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-@SpringBootApplication
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableAutoConfiguration
 @MapperScan("com.kasi.firstdemo.dao")
 public class FirstdemoApplication {
