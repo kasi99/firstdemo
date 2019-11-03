@@ -11,5 +11,6 @@ package com.kasi.firstdemo.testBrach;
 public class TestBrach {
     public static void main(String[] args) {
         System.out.println("当前分支是：release_20191104");
+        System.out.println("当前分支是：release_20191104");
     }
 }
