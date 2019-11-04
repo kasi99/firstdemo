@@ -12,5 +12,6 @@ public class TestBrach {
     public static void main(String[] args) {
         System.out.println("用来测试分支合并，当前分支是release");
         System.out.println("用来测试分支合并，当前分支是release");
+        System.out.println("用来测试分支合并，当前分支是release");
     }
 }
