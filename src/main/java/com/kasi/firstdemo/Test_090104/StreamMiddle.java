@@ -1,6 +1,7 @@
 package com.kasi.firstdemo.Test_090104;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -15,13 +16,15 @@ import java.util.stream.Collectors;
 /* 先构造一个集合 */
 public class StreamMiddle {
     public static void main(String[] args) {
-        List<User> list = new ArrayList<>();
+        ArrayList<User> list = new ArrayList<>();
         list.add(new User("谢逊", 49));
         list.add(new User("黛绮丝", 29));
         list.add(new User("殷天正", 59));
         list.add(new User("韦一笑", 39));
         list.add(new User("谢逊", 49));
-
+        List<Integer> integers = Arrays.asList(1, 2, 3, 4);
+        Integer count = 1;
+        test(count);
         /* 将对象集合中的name取出拼接成list集合 */
         List<String> collect1 = list.stream().map(User::getName).collect(Collectors.toList());
         System.out.println("-------将对象集合中的name取出拼接成list集合----------");
@@ -83,5 +86,13 @@ public class StreamMiddle {
 //        list.stream().filter(x->x.getAge()>30).sorted((e1,e2)->{
 //            return e2.getAge().compareTo(e1.getAge());
 //        }).limit(2).forEach(System.out::println);
+    }
+
+    public static void test(Integer count){
+        System.out.println("打印：" + count);
+        System.out.println("打印：" + count);
+        System.out.println("打印：" + count);
+        System.out.println("打印：" + count);
+        System.out.println("打印：" + count);
     }
 }
