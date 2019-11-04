@@ -10,7 +10,7 @@ package com.kasi.firstdemo.testBrach;
 
 public class TestBrach {
     public static void main(String[] args) {
-        System.out.println("当前分支是：release_20191104");
-        System.out.println("当前分支是：release_20191104");
+        System.out.println("用来测试分支合并，当前分支是develop_我刚刚修改");
+        System.out.println("用来测试分支合并，当前分支是develop_2019110401");
     }
 }
